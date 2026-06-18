@@ -1,0 +1,15 @@
+class Solution {
+    static int toyCount(int arr[], int k) {
+        Arrays.sort(arr);
+        int count = 0;
+        for(int i : arr){
+            if(i <= k){
+                k -= i;
+                count++;
+            }else{
+                break;
+            }
+        }
+        return count;
+    }
+}
